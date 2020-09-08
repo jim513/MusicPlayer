@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.media.*?>
+<?import de.jensd.fx.glyphs.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.rootController">
+	<children>
+		<AnchorPane fx:id="pane_Settings" layoutX="407.0" layoutY="244.0" prefHeight="250.0" prefWidth="226.0" style="-fx-background-color: #3DF0F0; -fx-background-radius: 0.5em;" visible="false">
+			<children>
+				<JFXButton fx:id="btn_Close_Setting" layoutX="154.0" layoutY="6.0" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="64.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;" text="CLOSE" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXToggleButton fx:id="btn_Toggle" layoutX="6.0" layoutY="51.0" onAction="#handleButtonAction" prefHeight="61.0" prefWidth="192.0" text="DARK MODE" textFill="WHITE" toggleColor="#002050" toggleLineColor="#999999" unToggleColor="#1da1f2" unToggleLineColor="#fafafa">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="12.0" />
+					</font>
+				</JFXToggleButton>
+				<Label layoutX="71.0" layoutY="158.0" prefHeight="33.0" prefWidth="82.0" text="-Made By-" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="15.0" />
+					</font>
+				</Label>
+				<JFXToggleButton fx:id="btn_Toggle2" layoutX="-7.0" layoutY="102.0" onAction="#handleButtonAction" prefHeight="61.0" prefWidth="192.0" text="REPEAT" textFill="WHITE" toggleColor="#fafafa" toggleLineColor="#999999" unToggleColor="#1da1f2" unToggleLineColor="#fafafa">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="12.0" />
+					</font>
+				</JFXToggleButton>
+				<Label layoutX="20.0" layoutY="183.0" prefHeight="33.0" prefWidth="181.0" text="Shin Min Jae" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="15.0" />
+					</font>
+				</Label>
+				<Label layoutX="19.0" layoutY="206.0" prefHeight="33.0" prefWidth="181.0" text="Go Jae Gyeong" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="15.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="pane_Background" prefHeight="500.0" prefWidth="404.0" style="-fx-background-color: #1DA1F2; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton fx:id="openFile" buttonType="RAISED" layoutX="46.0" layoutY="391.0" onAction="#openFileAction" ripplerFill="#6f16f9" text="Open File" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="addSong" buttonType="RAISED" layoutX="46.0" layoutY="426.0" onAction="#addSongAction" ripplerFill="#6d16f7" text="Add Song" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="removePlaylist" buttonType="RAISED" layoutX="46.0" layoutY="461.0" onAction="#removeSongAction" ripplerFill="#6d16f7" text="Remove song" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="openPlaylist" buttonType="RAISED" layoutX="188.0" layoutY="388.0" onAction="#openPlaylistAction" ripplerFill="#6d16f7" text="Open playlist" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="newPlaylist" buttonType="RAISED" layoutX="188.0" layoutY="412.0" onAction="#newPlaylistAction" ripplerFill="#6b16f5" text="New playlist" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="savePlaylist" buttonType="RAISED" layoutX="188.0" layoutY="441.0" onAction="#savePlaylistAction" ripplerFill="#6d16f7" text="Save playlist" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="removePlaylist" buttonType="RAISED" layoutX="188.0" layoutY="468.0" onAction="#removePlaylistAction" ripplerFill="#6b16f5" text="Remove playlist" textFill="WHITE">
+					<font>
+						<Font name="Lucida Console" size="12.0" />
+					</font>
+				</JFXButton>
+				<ImageView fitHeight="25.0" fitWidth="25.0" layoutX="12.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/image_src/open_file.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/add_song.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/remove_song.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="25.0" fitWidth="30.0" layoutX="161.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/open_playlist.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="30.0" fitWidth="30.0" layoutX="160.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/new_playlist.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="22.0" fitWidth="22.0" layoutX="161.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/save_playlist.png" />
+               </image>
+				</ImageView>
+				<ImageView fitHeight="25.0" fitWidth="25.0" layoutX="160.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image_src/trash.png" />
+               </image>
+				</ImageView>
+				<Label fx:id="music_Title" layoutX="20.0" layoutY="22.0" prefHeight="36.0" prefWidth="294.0" text="Music Title" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="25.0" />
+					</font>
+				</Label>
+				<Label fx:id="music_Artist" layoutX="21.0" layoutY="63.0" prefHeight="23.0" prefWidth="269.0" text="Music Artist" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="15.0" />
+					</font>
+				</Label>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="315.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="image_src/speaker.png" />
+					</image>
+				</ImageView>
+				<Slider fx:id="volume_Slide" layoutX="272.0" layoutY="141.0" prefHeight="18.0" prefWidth="103.0" value="100.0" />
+				<JFXButton fx:id="btn_Settings" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="345.0" layoutY="452.0" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="35.0" style="-fx-background-radius: 3em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/settings-work-tool.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton fx:id="btn_Close" layoutX="325.0" layoutY="6.0" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="64.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;" text="CLOSE" textFill="WHITE">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="btn_Play" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="60.0" layoutY="129.0" onAction="#buttonPlay" prefHeight="33.0" prefWidth="41.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/play-button.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton fx:id="btn_Previous" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="10.0" layoutY="129.0" onAction="#buttonPrevious" prefHeight="33.0" prefWidth="41.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/previous-track.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton fx:id="btn_Stop" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="161.0" layoutY="129.0" onAction="#buttonStop" prefHeight="33.0" prefWidth="41.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/stop.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<JFXButton fx:id="btn_Next" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="212.0" layoutY="129.0" onAction="#buttonNext" prefHeight="33.0" prefWidth="41.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/next-track-button.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<Label fx:id="time" alignment="CENTER" layoutX="331.0" layoutY="86.0" prefHeight="33.0" prefWidth="57.0" text="00 : 00" textFill="#fafafa">
+					<font>
+						<Font name="Arial Rounded MT Bold" size="15.0" />
+					</font>
+				</Label>
+				<JFXButton fx:id="btn_Pause" alignment="CENTER" buttonType="RAISED" ellipsisString="" layoutX="110.0" layoutY="129.0" onAction="#buttonPause" prefHeight="33.0" prefWidth="41.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0084ff;">
+					<graphic>
+						<ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="image_src/pause-symbol.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</JFXButton>
+				<ProgressBar fx:id="play_Slide" layoutX="19.0" layoutY="96.0" prefHeight="18.0" prefWidth="305.0" progress="0.0" style="-fx-background-color: #9933CC;" />
+				<TableView fx:id="table_Song" layoutX="9.0" layoutY="177.0" prefHeight="200.0" prefWidth="383.0">
+					<columns>
+						<TableColumn fx:id="column_SongName" prefWidth="190.0" text="Song Name" />
+						<TableColumn fx:id="column_Artist" minWidth="8.0" prefWidth="118.0" text="Artisit" />
+						<TableColumn fx:id="column_Duration" minWidth="0.0" prefWidth="74.0" text="Duration" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>
