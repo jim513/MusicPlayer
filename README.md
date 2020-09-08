@@ -14,9 +14,6 @@ Information
  
  -Application Initial setting : We added 2 sample songs with relative path.
 
- - if you need .txt file to save playlist, you can use musicList.txt (empty file)
-   ,of course you can use another txt file.
- 
  -Music saved format : Music_Title;Music_Artist;URL(file path);Duration
 
  -Special Tool used for building basic shape : JavaFx Scene Builder 2.0 (Oracle)
